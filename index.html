@@ -5,10 +5,146 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>portfolio | smarbo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="cursor.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://kit.fontawesome.com/c557e85911.js" crossorigin="anonymous"></script>
+  <script src="components.js"></script>
 </head>
 
 <body>
-  <h1>Welcome to my portfolio</h1>
+
+  <main class="main">
+    <h1 class="headline" style="font-family: 'PT Serif', serif;">Hello, <span class="h-second">I'm</span> <span
+        class="h-third" style="font-family: 'FantasqueSans';"><a href="/">Eddie</a></span><span
+        class="h-fourth">.</span></h1>
+    <h2 class="description" style="font-family: 'PT Serif', serif;">I'm an aspiring <span
+        style=" color: var(--primary);">full-stack</span> <span style="color: var(--accent);">software engineer</span>.
+    </h2>
+    <div class="contacts">
+      <a target="_blank" rel="noreferrer" href="https://github.com/smarbo"><i class="fa-brands fa-github"></i></a>
+      <a target="_blank" rel="noreferrer" href="mailto:eddie@smarbo.xyz?subject=Hi%2C%20Eddie"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </main>
+  <section id="about">
+    <div class="content-container">
+      <h1 class="title">My Work <span><a href="https://github.com/smarbo" target="_blank" referrerpolicy="noreferrer"><i style="overflow: hidden; color: white; font-size: 20px;" class="fa-brands fa-github"></i></a></span></h1>
+      <div class="cards">
+        <project-card data-url="https://munchbox.vercel.app" data-title="Munchbox" data-desc="
+            A full-featured social recipe sharing
+            site with database integration, recipe
+            creation and deletion, and cloud image
+            saving. 
+            <br><br>
+            Technologies used: React, NextJS, MongoDB, Cloudinary, TailwindCSS
+            "></project-card>
+        <project-card data-url="https://realmofriches.org" data-title="Realm of Riches" data-desc="
+            A 2D web-based multiplayer game with
+            WebSockets and user authentication.
+            Support for both public and private worlds
+            where a join code is required.
+            <br><br>
+            Technologies used: HTML, CSS, TypeScript, HTML Canvas, WebSockets, MongoDB
+            
+            "></project-card>
+        <project-card data-url="https://chat.smarbo.xyz" data-title="Gochat" data-desc="
+            A realtime chat application using WebSockets and Go.
+            Features include a username system, custom rooms,
+            and a sleek and modern UI inspired by the one used by Discord.
+            <br><br>
+            Technologies used: HTML, CSS, JavaScript, Go, WebSockets
+            "></project-card>
+        <project-card data-url="https://portal.smarbo.xyz" data-title="Portal OS" data-desc="
+            A web-based operating system with combined styling and feel
+            of macOS and Ubuntu. Features include a 3D background using Vanta.js,
+            a clock, apps, and it runs Doom.
+            <br><br>
+            Technologies used: React, NextJS, TypeScript, JSX, TailwindCSS
+            "></project-card>
+ 
+      </div>
+    </div>
+  </section>
+  <section id="info">
+    <h2>My Development Setup</h2>
+    <p>
+    I believe that having an <strong>efficient</strong> and <strong>easy</strong> to use development setup is key to becoming the <strong>best</strong> developer you can be.
+    That's why I have <strong>hand-crafted</strong> my development setup from text editor to operating system.
+    Below, is listed my setup
+    which I run on my main PC and see as the most powerful set of tools for <strong>me</strong>.
+    </p>
+    <ul>
+    <li>
+      <a target="_blank" href="https://github.com/smarbo/neovim">My Neovim Configuration</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://github.com/smarbo/tmux">My TMUX Configuration</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://omakub.org">My Ubuntu Configuration <span style="font-size: 8px;">(Make sure to uninstall VSCode!)</span></a>
+    </li>
+    </ul>
+
+  </section>
+
+  <div class="scroll-indicator" id="scrollIndicator"><i class="fa-solid fa-chevron-down"></i></div>
+<div class="cursor-dot-outline"></div>
+<div class="cursor-dot"></div>
+  <script>
+    const sr = ScrollReveal({reset: true})
+    sr.reveal(".contacts", {
+      delay: 2000,
+      distance: "50px",
+      scale: 0.5
+    })
+    sr.reveal(".headline", {
+      delay: 200
+    })
+    sr.reveal(".h-second", {
+      delay: 500
+    })
+    sr.reveal(".h-third", {
+      delay: 800,
+    })
+    sr.reveal(".h-fourth", {
+      delay: 1200
+    })
+    sr.reveal(".description", {
+      delay: 1500,
+      distance: "100px",
+      origin: "left",
+    })
+    sr.reveal("section", {
+      delay: 300,
+      distance: "500px",
+      origin: "right"
+    })
+  </script>
+
+  <script>
+
+    window.addEventListener("scroll", () => {
+      if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
+        scrollIndicator.style.bottom = "-50px"
+      } else {
+        scrollIndicator.style.bottom = "30px"
+      }
+    })
+
+
+    let body = document.querySelector("body");
+    window.addEventListener("mousemove", (e) => {
+      body.style.backgroundPositionX = e.pageX / -12 + "px";
+      body.style.backgroundPositionY = e.pageY / -12 + "px";
+    })
+
+
+
+}
+  </script>
+
+  <script src="cursor.js"></script>
+
 </body>
 
 </html>

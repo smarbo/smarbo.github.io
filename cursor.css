@@ -1,0 +1,29 @@
+:root {
+  --dot: rgba(111, 0, 187, 1);
+  --outline: rgba(111, 0, 187, 0.5);
+}
+
+html, body, html *, body * {
+	 cursor: none;
+}
+ .cursor-dot, .cursor-dot-outline {
+	 pointer-events: none;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 border-radius: 50%;
+	 opacity: 0;
+	 transform: translate(-50%, -50%);
+	 transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+ .cursor-dot {
+	 width: 8px;
+	 height: 8px;
+	 background-color: var(--dot);
+}
+ .cursor-dot-outline {
+	 width: 40px;
+	 height: 40px;
+	 background-color: var(--outline);
+}
+ 

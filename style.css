@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #090711;
+  --bg-accent: #110630;
+  --primary: #9788e0;
+  --secondary: #261388;
+  --accent: #5838f8;
+  --text: #edecf3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  background-image: linear-gradient(to right, #220066 1px, transparent 1px), linear-gradient(to bottom, #220066 1px, transparent 1px);
+  background-size: 40px 40px;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'FantasqueSans';
+  src: url('fonts/FantasqueSans.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 4px solid var(--primary);
+  background-color: var(--accent);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main>* {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.headline {
+  color: var(--text);
+  user-select: none;
+}
+
+.description {
+  color: var(--text);
+  user-select: none;
+}
+
+.h-third {
+  background: linear-gradient(var(--secondary), var(--accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.scroll-indicator {
+  color: var(--primary);
+  font-size: 1.8rem;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s cubic-bezier(0.61, -0.3, 0.56, 1.57);
+}
+
+.scroll-indicator>* {
+  overflow: hidden;
+}
+
+section,
+main {
+  min-width: 100vw;
+  min-height: 103vh;
+  font-family: "FantasqueSans";
+}
+
+
+.contacts {
+  display: flex;
+}
+
+.contacts>* {
+  font-size: 32px;
+  color: white;
+  margin-right: 16px;
+}
+
+.contacts>a>i {
+  overflow: hidden;
+}
+
+.content-container {
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.64);
+}
+
+.title {
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 4rem;
+  width: 85%;
+  height: 2px;
+  background: white;
+}
+
+#about {
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
+
+.cards {
+  max-width: 100%;
+  max-height: 100%;
+  display: grid;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, 500px);
+  gap: 32px;
+  padding: 16px;
+}
+
+
+.card {
+  position: relative;
+  border-radius: 24px;
+  width: 500px;
+  height: 220px;
+  background: var(--accent);
+  border: 4px solid var(--primary);
+  display: flex;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.card-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: white;
+  padding: 8px;
+  margin-right: 16px;
+  box-shadow: 0 0 8px 2px var(--secondary);
+}
+
+.card-container {
+  flex-grow: 1;
+}
+
+.card-title {
+  padding-left: 32px;
+  font-family: "PT Serif";
+  padding-top: 12px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.card-desc {
+  position: absolute;
+  top: 72px;
+  padding-right: 24px;
+}
+
+#info {
+  padding-top: 200px;
+  padding-left: 400px;
+  padding-right: 400px;
+  color: white;
+  font-family: "PT Serif", serif;
+}
+
+#info>* {
+  padding-top: 80px;
+}
+
+#info h2 {
+  font-size: 32px; 
+}
+
+#info p {
+  font-size: 18px;
+}
+
+#info ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+#info ul li {
+  overflow: hidden;
+  position: relative;
+  padding-left: 25px;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+#info ul li a {
+  color: white;
+}
+
+#info ul li::before {
+  content: "\2022";
+  color: #007BFF;
+  font-size: 1.5rem;
+  position: absolute;
+  margin-top: 0.5rem;
+  left: 0;
+  top: 0;
+}
+
+@media screen and (max-width: 750px) {
+  .card {
+    width: 50vw;
+    height: 400px;
+  }
+
+  .card-container {
+    position: absolute;
+    top: 84px;
+    height: 300px;
+    width: 100%;
+  }
+
+  .cards {
+    grid-template-columns: repeat(auto-fit, 50vw);
+  }
+}
