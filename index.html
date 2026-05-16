@@ -1,24 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>portfolio | smarbo</title>
+  <meta name="description" content="Eddie — solo software developer building backend systems, frontends, and Odoo solutions.">
+  <meta name="author" content="Eddie, Smarbo">
+  <title>Eddie · Smarbo</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231d6b6b'/><text x='16' y='22' text-anchor='middle' font-size='16' fill='%23faf9f7' font-family='system-ui'>S</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="cursor.css">
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://kit.fontawesome.com/c557e85911.js" crossorigin="anonymous"></script>
-  <script src="components.js"></script>
 </head>
-
 <body>
-
-  <h1 style="color: white;">
-  Under Construction 🏗️ 
-  </h1>
-  <script src="cursor.js"></script>
-
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-logo" href="#top">Smarbo</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Solo software developer</p>
+        <h1 class="hero-title">Hi, I'm <em>Eddie</em>.</h1>
+        <p class="hero-lead">
+          I design and ship software end to end—solid backends, thoughtful frontends,
+          and practical <strong>Odoo</strong> extensions for real businesses.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">See my work</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-card">
+          <span class="hero-card-label">stack</span>
+          <ul class="hero-tags">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Odoo</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">About</span>
+          <h2>Building things that work in production</h2>
+        </header>
+        <div class="about-grid">
+          <p>I'm a solo developer who enjoys the full craft: APIs and data models on the backend, clear interfaces on the frontend, and ERP customizations when teams run on Odoo.</p>
+          <p>I care about readable code, honest communication, and shipping features people actually use. I aim for maintainable, trustworthy results.</p>
+        </div>
+        <ul class="pillars">
+          <li class="pillar"><span class="pillar-icon" aria-hidden="true">⌁</span><h3>Backend</h3><p>Services, integrations, and data layers built to stay reliable as you grow.</p></li>
+          <li class="pillar"><span class="pillar-icon" aria-hidden="true">◫</span><h3>Frontend</h3><p>Interfaces that feel calm and intentional—responsive, accessible, and fast.</p></li>
+          <li class="pillar"><span class="pillar-icon" aria-hidden="true">◎</span><h3>Odoo</h3><p>Custom modules and workflows that fit how your company really operates.</p></li>
+        </ul>
+      </div>
+    </section>
+    <section class="section section-alt" id="work">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Work</span>
+          <h2>Selected projects</h2>
+          <p class="section-intro">Commercial and in-house tools I've designed and built.</p>
+        </header>
+        <article class="project-card">
+          <div class="project-card-visual">
+            <div class="project-mock" aria-hidden="true">
+              <div class="mock-toolbar"></div>
+              <div class="mock-canvas">
+                <div class="mock-label"></div>
+                <div class="mock-bar"></div>
+                <div class="mock-table"></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-meta">
+              <span class="project-badge">Odoo 19</span>
+              <span class="project-badge">Apps Store</span>
+            </div>
+            <h3>Smarbo Label Studio</h3>
+            <p>A visual label designer inside Odoo—drag-and-drop layout, barcodes, dynamic fields, and order-line tables. Design once, print PDF labels at exact dimensions from sales orders, products, pickings, and more.</p>
+            <ul class="project-features">
+              <li>Canvas editor with grid snap and live preview</li>
+              <li>Print menu integration on business documents</li>
+              <li>Tables for SO / PO line items</li>
+            </ul>
+            <div class="project-links">
+              <a class="btn btn-primary btn-sm" href="https://apps.odoo.com/apps/modules/19.0/smrb_label_studio/" target="_blank" rel="noopener noreferrer">Odoo Apps</a>
+              <a class="btn btn-ghost btn-sm" href="https://github.com/smarbo/smrb_label_studio" target="_blank" rel="noopener noreferrer">Source</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="section" id="contact">
+      <div class="container contact-layout">
+        <header class="section-header">
+          <span class="section-label">Contact</span>
+          <h2>Let's talk</h2>
+          <p class="section-intro">A new project, an Odoo module, or just a question—send a message and I'll get back to you.</p>
+        </header>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name" required placeholder="Your name"></div>
+          <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required placeholder="you@company.com"></div>
+          <div class="field field-full"><label for="message">Message</label><textarea id="message" name="message" rows="5" required placeholder="What are you working on?"></textarea></div>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
+        <aside class="contact-aside">
+          <p>Prefer email directly?</p>
+          <a class="contact-email" href="mailto:eddie@smarbo.xyz">eddie@smarbo.xyz</a>
+          <p class="contact-note">Based in Europe · Remote-friendly</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Smarbo · Eddie</p>
+      <a href="https://github.com/smarbo" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </footer>
+  <script src="main.js"></script>
 </body>
-
 </html>
